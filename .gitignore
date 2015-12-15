@@ -1,9 +1,13 @@
 *.class
+<<<<<<< HEAD
 logs/
 target/
 .project
 .classpath
 .settings/
+=======
+
+>>>>>>> ae1a445260fa3788a4b46cefef97c7ef1931a9aa
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
