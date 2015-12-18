@@ -46,5 +46,6 @@ public class Avro2Parquet {
 		writer.write(user1);
 		writer.write(user2);
 		writer.close();
+
 	}
 }
