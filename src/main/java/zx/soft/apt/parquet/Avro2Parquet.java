@@ -4,10 +4,8 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.avro.Schema;
-import org.apache.avro.file.DataFileReader;
-import org.apache.avro.generic.GenericDatumReader;
+import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericRecord;
-import org.apache.avro.io.DatumReader;
 import org.apache.hadoop.fs.Path;
 import org.apache.parquet.avro.AvroParquetWriter;
 import org.apache.parquet.avro.AvroSchemaConverter;
@@ -35,19 +33,18 @@ public class Avro2Parquet {
 
 	public static void main(String[] args) throws IOException {
 		Schema schema = new Schema.Parser().parse(Resources.getResource("user.avsc").openStream());
-		File fileFrom = new File("src/main/resources/user.avro");
 		File fileTo = new File("src/main/resources/user.parquet");
-		DatumReader<GenericRecord> datumReader = new GenericDatumReader<GenericRecord>(schema);
-		DataFileReader<GenericRecord> dataFileReader = new DataFileReader<GenericRecord>(fileFrom, datumReader);
 		AvroParquetWriter<GenericRecord> writer = new AvroParquetWriter<GenericRecord>(new Path(fileTo.getPath()),
 				schema);
-		GenericRecord user = null;
-		while (dataFileReader.hasNext()) {
-			user = dataFileReader.next();
-			System.out.println(user);
-			writer.write(user);
-		}
-		dataFileReader.close();
+		GenericRecord user1 = new GenericData.Record(schema);
+		user1.put("name", "Bengadf");
+		user1.put("favorite_number", 7);
+		GenericRecord user2 = new GenericData.Record(schema);
+		user2.put("name", "Bobdafg");
+		user2.put("favorite_number", 8);
+		user2.put("favorite_color", "pinkdfg");
+		writer.write(user1);
+		writer.write(user2);
 		writer.close();
 	}
 }

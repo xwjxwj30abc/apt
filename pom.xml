@@ -8,20 +8,44 @@
 		<artifactId>common-parent</artifactId>
 		<version>1.0.0</version>
 	</parent>
+
+
 	<properties>
 		<parquet.version>1.8.1</parquet.version>
 		<scala.binary.version>2.10</scala.binary.version>
 		<spark.version>1.5.1</spark.version>
 	</properties>
-	
+
 	<dependencies>
+
+		<dependency>
+			<groupId>org.bytedeco</groupId>
+			<artifactId>javacpp</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<!-- pcap -->
+		<dependency>
+			<groupId>org.pcap4j</groupId>
+			<artifactId>pcap4j-sample</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.pcap4j</groupId>
+			<artifactId>pcap4j-core</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
 		<!-- Spark dependency -->
 		<dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-core_${scala.binary.version}</artifactId>
 			<version>${spark.version}</version>
 		</dependency>
-		<!-- spark streaming -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_${scala.binary.version}</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-streaming_${scala.binary.version}</artifactId>
@@ -56,6 +80,7 @@
 			<artifactId>jna</artifactId>
 			<version>4.2.1</version>
 		</dependency>
+
 		<!--自己封装的hbase接口 -->
 		<dependency>
 			<groupId>zx.soft</groupId>
