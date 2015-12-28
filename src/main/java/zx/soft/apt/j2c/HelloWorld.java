@@ -11,13 +11,8 @@ public class HelloWorld {
 		int add(int a, int b);
 	}
 
-	public int add(int a, int b) {
-		return CLibrary.INSTANCE.add(a, b);
-	}
-
 	public static void main(String[] args) {
-		HelloWorld hello = new HelloWorld();
-		int c = hello.add(20, 20);
+		int c = CLibrary.INSTANCE.add(10, 2);
 		System.out.println(c);
 	}
 

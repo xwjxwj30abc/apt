@@ -67,21 +67,6 @@ public class JavaSparkSQL {
 		for (String name : teenagerNames) {
 			System.out.println(name);
 		}
-
-		//teenagers.write().partitionBy("age").parquet("");
-
-		/*parquetFile.registerTempTable("parquetFile");
-		DataFrame teenagers2 = sqlContext.sql("SELECT name FROM parquetFile WHERE age >= 13 AND age <= 19");
-		teenagerNames = teenagers2.toJavaRDD().map(new Function<Row, String>() {
-			@Override
-			public String call(Row row) {
-				return "Name: " + row.getString(0);
-			}
-		}).collect();
-		for (String name : teenagerNames) {
-			System.out.println(name);
-		}*/
-
 		ctx.stop();
 	}
 }

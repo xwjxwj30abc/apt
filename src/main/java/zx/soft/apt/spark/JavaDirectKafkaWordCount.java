@@ -23,36 +23,24 @@ import scala.Tuple2;
 
 import com.google.common.collect.Lists;
 
-/**
- * Consumes messages from one or more topics in Kafka and does wordcount.
- * Usage: DirectKafkaWordCount <brokers> <topics>
- *   <brokers> is a list of one or more Kafka brokers
- *   <topics> is a list of one or more kafka topics to consume from
- *
- * Example:
- *    $ bin/run-example streaming.KafkaWordCount broker1-host:port,broker2-host:port topic1,topic2
- */
-
 public final class JavaDirectKafkaWordCount {
 	private static final Pattern SPACE = Pattern.compile(" ");
 
 	public static void main(String[] args) {
-		if (args.length < 2) {
+		/*if (args.length < 4) {
 			System.err.println("Usage: DirectKafkaWordCount <brokers> <topics>\n"
 					+ "  <brokers> is a list of one or more Kafka brokers\n"
 					+ "  <topics> is a list of one or more kafka topics to consume from\n\n");
 			System.exit(1);
-		}
-
-		String brokers = args[0];
-		String topics = args[1];
-
-		SparkConf sparkConf = new SparkConf().setAppName("JavaDirectKafkaWordCount").setMaster("local");
-		JavaStreamingContext jssc = new JavaStreamingContext(sparkConf, Durations.seconds(2));
-
+		}*/
+		//192.168.3.51:9092,192.168.3.52:9092
+		String brokers = "kafka01:9092,kafka02:9092";
+		String topics = "test";
+		SparkConf sparkConf = new SparkConf().setAppName("JavaDirectKafkaWordCount").setMaster("spark://Company:7077");
+		JavaStreamingContext jssc = new JavaStreamingContext(sparkConf, Durations.seconds(10));
 		HashSet<String> topicsSet = new HashSet<String>(Arrays.asList(topics.split(",")));
 		HashMap<String, String> kafkaParams = new HashMap<String, String>();
-		kafkaParams.put("metadata.broker.list", brokers);
+		kafkaParams.put("bootstrap.servers", brokers);
 
 		JavaPairInputDStream<String, String> messages = KafkaUtils.createDirectStream(jssc, String.class, String.class,
 				StringDecoder.class, StringDecoder.class, kafkaParams, topicsSet);
@@ -63,6 +51,7 @@ public final class JavaDirectKafkaWordCount {
 				return tuple2._2();
 			}
 		});
+
 		JavaDStream<String> words = lines.flatMap(new FlatMapFunction<String, String>() {
 			@Override
 			public Iterable<String> call(String x) {
@@ -81,7 +70,7 @@ public final class JavaDirectKafkaWordCount {
 			}
 		});
 		wordCounts.print();
-
+		//wordCounts.saveAsHadoopFiles("hdfs://bigdata4:8020/user/hdfs/output/spark_wordcount", "abc");
 		jssc.start();
 		jssc.awaitTermination();
 	}

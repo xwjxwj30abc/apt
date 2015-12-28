@@ -21,7 +21,7 @@ public class SimpleSparkTest {
 	public static void main(String[] args) {
 
 		String logFile = "hdfs://archtorm:9000/user/donglei/input/wordcount_input"; // Should be some file on your system
-		SparkConf conf = new SparkConf().setAppName("Simple Application").setMaster("local");
+		SparkConf conf = new SparkConf().setAppName("Simple Application").setMaster("spark://Company:7077");
 		JavaSparkContext sc = new JavaSparkContext(conf);
 		JavaRDD<String> logData = sc.textFile(logFile);
 		JavaRDD<String> words = logData.flatMap(new FlatMapFunction<String, String>() {

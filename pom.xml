@@ -38,24 +38,25 @@
 		<!-- Spark dependency -->
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-core_${scala.binary.version}</artifactId>
+			<artifactId>spark-core_2.10</artifactId>
 			<version>${spark.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-sql_${scala.binary.version}</artifactId>
+			<artifactId>spark-sql_2.10</artifactId>
 			<version>${spark.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-streaming_${scala.binary.version}</artifactId>
-			<version>${spark.version}</version>
+			<artifactId>spark-streaming_2.10</artifactId>
+			<version>1.5.1</version>
 		</dependency>
+
 		<!-- spark streaming kafka -->
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-streaming-kafka_${scala.binary.version}</artifactId>
-			<version>1.5.2</version>
+			<artifactId>spark-streaming-kafka_2.10</artifactId>
+			<version>1.5.1</version>
 		</dependency>
 		<!-- kafka client -->
 		<dependency>
@@ -168,7 +169,8 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>zx.soft.apt.mapreduce.ReadWriteTable</mainClass>
+							<!-- <mainClass>zx.soft.apt.mapreduce.ReadWriteTable</mainClass> -->
+							<mainClass>zx.soft.apt.spark.JavaDirectKafkaWordCount</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>

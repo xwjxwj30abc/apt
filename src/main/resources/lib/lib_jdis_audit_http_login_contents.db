@@ -1,0 +1,350 @@
+#              p h o n e =  a p i . m i a o p a i . c o m 
+0:0x4008:0:0:*:70686f6e653d*6170692e6d69616f7061692e636f6d0d0a
+#              t a o b a o . c o m      l g c =
+1:0x4904:1:0:*:74616f62616f2e636f6d0d0a*6c67633d*0d0a0d0a
+#              t m a l l . c o m      l g c =
+2:0x4904:1:0:*:746d616c6c2e636f6d0d0a*6c67633d*0d0a0d0a
+#              y h d . c o m      u n a m e =
+4:0x4104:1:0:*:7968642e636f6d0d0a*756e616d653d*0d0a0d0a
+#              j d . c o m        p i n =
+5:0x4104:1:0:*:6a642e636f6d0d0a*2070696e3d*0d0a0d0a
+#                p i n =  j d . c o m
+5:0x4104:0:0:*:2070696e3d*6a642e636f6d0d0a*0d0a0d0a
+#              l e t v . c o m      l o g i n n a m e =
+6:0x4104:1:0:*:6c6574762e636f6d0d0a*6c6f67696e6e616d653d
+#              " n i c k n a m e " : "  "  l e t v i m g . c o m \ 
+6:0x4800:0:0:*:226e69636b6e616d65223a22*22*6c657476696d672e636f6d5c
+#              S e t - C o o k i e :   s s o _ n i c k n a m e =  d o m a i n = . l e t v . c o m 
+0:0x4104:0:0:*:5365742d436f6f6b69653a2073736f5f6e69636b6e616d653d*646f6d61696e3d2e6c6574762e636f6d
+#              p p t v . c o m      P P n a m e =  $
+7:0x4100:1:0:*:707074762e636f6d0d0a*50504e616d653d*24
+#              u s e r n a m e =  H o s t :   a p i . u s e r g r o w t h . p p t v . c o m
+8:0x4108:0:0:*:757365726e616d653d*486f73743a206170692e7573657267726f7774682e707074762e636f6d0d0a
+#              i q i y i . c o m      u s e r _ n a m e % 2 2 % 3 A % 2 2  % 2 2
+9:0x4100:1:0:*:69716979692e636f6d0d0a*757365725f6e616d65253232253341253232*253232
+#              p a s s p o r t . c s d n . n e t
+0:0x8112:0:1:*:70617373706f72742e6373646e2e6e65740d0a
+#               c s d n . n e t      U s e r N a m e =
+10:0x4104:1:0:*:6373646e2e6e65740d0a*557365724e616d653d
+#               G E T   / o a u t h 2 / g e t _ v c o d e  u s e r N a m e =  &  a p i . w e i b o . c o m      //pc client login
+0:0x4100:1:0:0:474554202f6f61757468322f6765745f76636f6465*757365724e616d653d*26*6170692e776569626f2e636f6d0d0a
+#              l o g i n . p h p ?  w e i b o . c o m      n a m e % 3 D  % 2 6                                 //pc web login
+0:0x4200:2:0:*:6c6f67696e2e7068703f*776569626f2e636f6d0d0a*6e616d65253344*253236
+#              G E T   / l o g o u t . p h p    w e i b o . c o m        u n =                                  //pc web logout
+0:0x4104:2:0:0:474554202f6c6f676f75742e706870*20776569626f2e636f6d0d0a*20756e3d
+#              G E T   / h o m e / l o g o u t    m . w e i b o . c n      H 5 _ I N D E X _ T I T L E =        //mobile web logout
+0:0x4104:2:0:0:474554202f686f6d652f6c6f676f7574*206d2e776569626f2e636e0d0a*48355f494e4445585f5449544c453d
+#                 m . w e i b o . c n      H 5 _ I N D E X _ T I T L E =                                        //mobile web account
+12:0x4104:1:0:*:206d2e776569626f2e636e0d0a*48355f494e4445585f5449544c453d
+#              a p i . w e i b o . c n               u =                                                        //app login
+0:0x410a:2:0:*:6170692e776569626f2e636e0d0a*0d0a0d0a*753d
+#               w e i b o . c o m      n a m e % 3 D  % 2 6
+13:0x4200:1:0:*:776569626f2e636f6d0d0a*6e616d65253344*253236
+#              e m a i l =  &  w w w . 3 6 0 d o c . c o m
+0:0x4102:0:0:*:656d61696c3d*26*7777772e333630646f632e636f6d0d0a
+#               w w w . 3 6 0 d o c . c o m      L o g i n N a m e =
+14:0x4104:1:0:*:7777772e333630646f632e636f6d0d0a*4c6f67696e4e616d653d
+#               " d i s p l a y n a m e " : "  " u s e r n a m e " : "  "  //baidu nuomi app
+15:0x4002:1:0:*:22646973706c61796e616d65223a22*22757365726e616d65223a22*22
+#               U s e r - A g e n t :   A i M e i T u a n    n =
+16:0x4104:1:0:*:557365722d4167656e743a2041694d65695475616e*206e3d*0d0a0d0a
+#               n i c k n a m e =  1 2 6 . n e t
+17:0x4109:0:0:*:6e69636b6e616d653d*3132362e6e65740d0a
+#               1 2 6 . n e t      n i c k n a m e = 
+17:0x410a:1:0:*:3132362e6e65740d0a*6e69636b6e616d653d
+#               c o m m e n t . a p i . 1 6 3 . c o m  u s e r i d = 
+17:0x4108:1:0:*:636f6d6d656e742e6170692e3136332e636f6d*7573657269643d
+#               v 1 0 =  &  c t - a n d r o i d . o m n i t u r e . c n : 9 0 0 0           //ct client
+18:0x4100:0:0:*:7631303d*26*63742d616e64726f69642e6f6d6e69747572652e636e3a393030300d0a
+#               1 8 9 . c n  U S E R T R A C K _ U S E R C O D E =
+19:0x4104:1:0:*:3138392e636e*55534552545241434b5f55534552434f44453d
+#               3 6 0 b u y . c o m      l o g i n N a m e % 2 2 % 3 A % 2 2  % 2 2
+20:0x4102:1:0:*:3336306275792e636f6d0d0a*6c6f67696e4e616d65253232253341253232*253232
+#               3 6 0 b u y . c o m      p i n =
+21:0x4104:1:0:*:3336306275792e636f6d0d0a*70696e3d
+#               p i n =  3 6 0 b u y . c o m
+21:0x4104:0:0:*:70696e3d*3336306275792e636f6d0d0a*0d0a0d0a
+#               % 5 E % 7 E m i d % 3 D  m o b i l e a p i . z h e n a i . c o m
+22:0x4004:0:0:*:2535452537456d6964253344*6d6f62696c656170692e7a68656e61692e636f6d0d0a
+#               m o b i l e a p i . z h e n a i . c o m      % 5 E % 7 E m i d % 3 D
+22:0x4004:1:0:*:6d6f62696c656170692e7a68656e61692e636f6d0d0a*2535452537456d6964253344
+#               p h o n e =  d i d i t a x i . c o m . c n 
+23:0x4009:0:0:*:70686f6e653d*64696469746178692e636f6d2e636e0d0a
+#               j i a y u a n . c o m      P R O F I L E =  % 3 A  % 3 A 
+24:0x4100:2:0:*:6a69617975616e2e636f6d0d0a*50524f46494c453d*253341*253341
+#               L o g i n E m a i l =  b a i h e . c o m 
+25:0x4104:0:0:*:4c6f67696e456d61696c3d*62616968652e636f6d0d0a*0d0a0d0a
+#               b a i h e . c o m      L o g i n E m a i l =  
+25:0x4104:1:0:*:62616968652e636f6d0d0a*4c6f67696e456d61696c3d*0d0a0d0a
+#               u s e r I D =  &  b a i h e . c o m 
+26:0x4000:0:0:*:7573657249443d*26*62616968652e636f6d0d0a*0d0a0d0a
+#               p h o n e =  . f a n g . c o m 
+27:0x4008:0:0:*:70686f6e653d*2e66616e672e636f6d0d0a
+#              P O S T   / M o b i l e D y n a m i c L o g i n / V e r i f y C o d e A n d L o g i n  p a s s p o r t . f a n g . c o m  P h o n e N u m = 
+0:0x4008:2:0:0:504f5354202f4d6f62696c6544796e616d69634c6f67696e2f566572696679436f6465416e644c6f67696e*70617373706f72742e66616e672e636f6d*50686f6e654e756d3d
+#              P O S T   / N o r m a l L o g i n / L o g i n  p a s s p o r t . f a n g . c o m  u i d = 
+0:0x4008:2:0:0:504f5354202f4e6f726d616c4c6f67696e2f4c6f67696e*70617373706f72742e66616e672e636f6d*7569643d
+#               . s u n i n g . c o m      i d s L o g i n U s e r I d L a s t T i m e =    //pc web, app
+28:0x4104:1:0:*:2e73756e696e672e636f6d0d0a*6964734c6f67696e5573657249644c61737454696d653d
+#               p c a u t o . c o m . c n      c m u = 
+29:0x4104:1:0:*:70636175746f2e636f6d2e636e0d0a*636d753d
+#               G E T   / w e b s e r v i c e / g o n g r e n a p p . a s m x  m o b l i e =    H T T P / 
+30:0x4109:1:0:0:474554202f776562736572766963652f676f6e6772656e6170702e61736d78*6d6f626c69653d*20485454502f
+#               . l i e p i n . c o m      u s e r _ l o g i n = 
+31:0x410c:1:0:*:2e6c696570696e2e636f6d0d0a*757365725f6c6f67696e3d
+#              . d a j i e . c o m      " a c c o u n t " : "  "  " p a s s w o r d " : "  " 
+0:0x1002:1:3:*:2e64616a69652e636f6d0d0a*226163636f756e74223a22*22*2270617373776f7264223a22*22
+#               . d a j i e . c o m      l o g i n _ e m a i l =        //pc web cookie
+32:0x4104:1:0:*:2e64616a69652e636f6d0d0a*6c6f67696e5f656d61696c3d
+#               . g a n j i . c o m      G a n j i U s e r N a m e =    //pc web cookie
+33:0x4104:1:0:*:2e67616e6a692e636f6d0d0a*47616e6a69557365724e616d653d
+#              c . t i e b a . b a i d u . c o m      u n =             //app baidu tieba
+0:0x410a:1:0:*:632e74696562612e62616964752e636f6d0d0a*756e3d*0d0a0d0a
+#               u n a m e =  t i e b a . b a i d u . c o m 
+34:0x4109:0:0:*:756e616d653d*74696562612e62616964752e636f6d0d0a
+#               u s e r N a m e =  b a i d u . c o m
+35:0x4109:0:0:*:757365724e616d653d*62616964752e636f6d0d0a
+#               " u s e r n a m e "   :   "  "                          //baidu tieba app login (http reply)
+0:0x4002:0:-1:*:22757365726e616d6522203a2022*22
+#               w a p p a s s . b a i d u . c o m                       //mobile web baidu, app baidu tieba, app baiduyun
+0:0x8102:0:-1:*:776170706173732e62616964752e636f6d0d0a
+#              1 7 u s o f t . c o m      " l o g i n N a m e " : "  "  //同程旅游app
+0:0x4002:1:0:*:313775736f66742e636f6d0d0a*226c6f67696e4e616d65223a22*22
+#              " U s e r N a m e " : "  "  " A v a t a r N a m e E n t i t i e s " : 
+0:0x4002:0:0:*:22557365724e616d65223a22*22*224176617461724e616d65456e746974696573223a
+#              G E T   / n e x t . j s p ?  u s e r n a m e =  &
+0:0x4100:1:0:0:474554202f6e6578742e6a73703f*757365726e616d653d*26
+#              S e t - C o o k i e :    n a m e % 3 D  % 2 6  s i n a . c o m . c n
+0:0x4600:1:0:*:5365742d436f6f6b69653a20*6e616d65253344*253236*73696e612e636f6d2e636e0d0a*0d0a0d0a
+#              n a m e =  &  l o g i n . s i n a . c o m . c n
+0:0x4100:0:0:*:6e616d653d*26*6c6f67696e2e73696e612e636f6d2e636e0d0a
+#              n a m e =    H T T P  l o g i n . s i n a . c o m . c n
+0:0x4100:0:0:*:6e616d653d*2048545450*6c6f67696e2e73696e612e636f6d2e636e0d0a
+#              a c t i o n = l o g i n  q q . c o m      p t 2 g g u i n = o 0
+0:0x4005:2:0:*:616374696f6e3d6c6f67696e*71712e636f6d0d0a*707432676775696e3d6f30
+#              l o g i n ?  u =  &           . q q . c o m      //pc web qq quick login by input numer, mobile web qq quick login
+0:0x4101:1:0:*:6c6f67696e3f*753d*26*0d0a0d0a*2e71712e636f6d0d0a
+#              G E T   / l o g i n . h t m l  H o s t :   3 g . m o p . c o m      % 7 C  % 7 C   //mobile web login by weixi zhanghao
+0:0x4100:2:0:0:474554202f6c6f67696e2e68746d6c*486f73743a2033672e6d6f702e636f6d0d0a*253743*253743
+#              G E T   / j u m p ?  c l i e n t u i n =  &  p t l o g i n 2 . q q . c o m     //qq quick login by click icon
+0:0x4100:1:0:0:474554202f6a756d703f*636c69656e7475696e3d*26*70746c6f67696e322e71712e636f6d0d0a
+#              G E T   / o a u t h / l o g i n _ j u m p  p t 2 g g u i n = o 0
+0:0x4104:1:0:0:474554202f6f617574682f6c6f67696e5f6a756d70*707432676775696e3d6f30
+#              G E T   / o a u t h / s h o w  o p e n a p i . q z o n e . q q . c o m      o _ c o o k i e =
+0:0x4104:2:0:0:474554202f6f617574682f73686f77*6f70656e6170692e717a6f6e652e71712e636f6d0d0a*6f5f636f6f6b69653d
+#              G E T   / o a u t h / s h o w  o p e n a p i . q z o n e . q q . c o m      p t u i _ l o g i n u i n =
+0:0x4104:2:0:0:474554202f6f617574682f73686f77*6f70656e6170692e717a6f6e652e71712e636f6d0d0a*707475695f6c6f67696e75696e3d
+#              u i n =  &  a p p i d =  c h e c k . p t l o g i n 2 . q q . c o m 
+0:0x4001:0:0:*:75696e3d*26*61707069643d*636865636b2e70746c6f67696e322e71712e636f6d0d0a
+#              a p p i d =  u i n =  &  c h e c k . p t l o g i n 2 . q q . c o m 
+0:0x4001:1:0:*:61707069643d*75696e3d*26*636865636b2e70746c6f67696e322e71712e636f6d0d0a
+#                  q q . c o m      p t 2 g g u i n = o 0
+11000:0x4005:1:0:*:71712e636f6d0d0a*707432676775696e3d6f30
+#              l o g i n N a m e =  l o g i n P a s s w d =  p a s s p o r t . m o p . c o m              //mobile web
+0:0x1119:0:1:*:6c6f67696e4e616d653d*6c6f67696e5061737377643d*70617373706f72742e6d6f702e636f6d0d0a
+#              G E T   / a c c o u n t / j s o n l o g o n  u s e r n a m e =  s s o . t i e x u e . n e t
+0:0x4108:1:0:0:474554202f6163636f756e742f6a736f6e6c6f676f6e*757365726e616d653d*73736f2e7469657875652e6e65740d0a
+#              p a s s p o r t =    H T T P  l o g i n . y o u k u . c o m
+0:0x4101:0:0:*:70617373706f72743d*2048545450*6c6f67696e2e796f756b752e636f6d0d0a
+#              G E T   / a j a x l o g i n u t f 8 . p h p  i f e n g . c o m      I F _ U S E R =
+0:0x4004:2:0:0:474554202f616a61786c6f67696e757466382e706870*6966656e672e636f6d0d0a*49465f555345523d
+#                  i f e n g . c o m      I F _ U S E R =
+12000:0x4004:1:0:*:6966656e672e636f6d0d0a*49465f555345523d
+#              w w w . k a i x i n 0 0 1 . c o m      _ p r e e m a i l =  k e y = s u b m i t _ f o r m _ s e c l o g i n _ j s  //pc web
+0:0x4106:1:0:*:7777772e6b616978696e3030312e636f6d0d0a*5f707265656d61696c3d*6b65793d7375626d69745f666f726d5f7365636c6f67696e5f6a73
+#              l o g i n . k a i x i n 0 0 1 . c o m      _ p r e e m a i l =  k e y = s u b m i t _ f o r m _ s e c l o g i n _ j s
+0:0x4106:1:0:*:6c6f67696e2e6b616978696e3030312e636f6d0d0a*5f707265656d61696c3d*6b65793d7375626d69745f666f726d5f7365636c6f67696e5f6a73
+#              P O S T   / a c c o u n t / s e t t o k e n ?  w w w . m e i t u a n . c o m      l s u =    //pc web
+0:0x5006:2:0:0:504f5354202f6163636f756e742f736574746f6b656e3f*7777772e6d65697475616e2e636f6d0d0a*6c73753d
+#              P O S T   / l o g i n / p h o n e _ n u m  p a s s w o r d =  p h o n e _ n u m =            //zhihu
+0:0x200a:1:2:0:504f5354202f6c6f67696e2f70686f6e655f6e756d*70617373776f72643d*70686f6e655f6e756d3d
+#              P O S T   / l o g i n / p h o n e _ n u m  p h o n e _ n u m =  p a s s w o r d =            //zhihu
+0:0x100a:1:2:0:504f5354202f6c6f67696e2f70686f6e655f6e756d*70686f6e655f6e756d3d*70617373776f72643d
+#              . z h i h u . c o m      e m a i l =  p a s s w o r d =                                          //zhihu
+0:0x110a:1:2:*:2e7a686968752e636f6d0d0a*656d61696c3d*70617373776f72643d
+#              . z h i h u . c o m      p a s s w o r d =  e m a i l =                                          //zhihu
+0:0x210a:1:2:*:2e7a686968752e636f6d0d0a*70617373776f72643d*656d61696c3d
+#              m . 5 5 t u a n . c o m      m o b i l e p h o n e = 
+0:0x400a:1:0:*:6d2e35357475616e2e636f6d0d0a*6d6f62696c6570686f6e653d
+#              l o g i n . 5 5 . c o m      m o b i l e = 
+0:0x400a:1:0:*:6c6f67696e2e35352e636f6d0d0a*6d6f62696c653d
+#              d i a n p i n g . c o m               m o b i l e = 
+0:0x400a:2:0:*:6469616e70696e672e636f6d0d0a*0d0a0d0a*6d6f62696c653d
+#              w w w . l a s h o u . c o m      m o b i l e = 
+0:0x400a:1:0:*:7777772e6c6173686f752e636f6d0d0a*6d6f62696c653d
+#              l o g i n . t u d o u . c o m      m o b i l e = //mobile web
+0:0x410a:1:0:*:6c6f67696e2e7475646f752e636f6d0d0a*6d6f62696c653d
+#              u s e r N a m e =     w i r e l e s s . t i a n y a . c n
+0:0x4100:0:0:*:757365724e616d653d*20*776972656c6573732e7469616e79612e636e0d0a
+#              p a s s p o r t 1 . x k h o u s e . c o m               u s e r n a m e =  p a s s w o r d = 
+0:0x110a:2:3:*:70617373706f7274312e786b686f7573652e636f6d0d0a*0d0a0d0a*757365726e616d653d*70617373776f72643d
+#              p a s s p o r t 1 . x k h o u s e . c o m               p a s s w o r d =  u s e r n a m e = 
+0:0x110a:2:3:*:70617373706f7274312e786b686f7573652e636f6d0d0a*0d0a0d0a*70617373776f72643d*757365726e616d653d
+#              u i n % 3 D  % 2 6  c . i s d s p e e d . q q . c o m            //qq num quick login (peiyinxiu app, meituxiuxiu app)
+0:0x4101:0:0:*:75696e253344*253236*632e69736473706565642e71712e636f6d0d0a
+#              p e i y i n x i u . c o m      " n i c k n a m e " : "  "            //peiyinxiu app weibo and weixin login
+0:0x4002:1:0:*:70656979696e7869752e636f6d0d0a*226e69636b6e616d65223a22*22
+#              . i c i b a . c o m              //jin shan ci ba
+0:0xc104:0:0:*:2e69636962612e636f6d0d0a
+#               t i a n y a . c n
+0:0x8112:18:1:*:7469616e79612e636e0d0a
+#                w w w . 1 8 x i a n g . o r g
+0:0x8512:16:17:*:7777772e31387869616e672e6f72670d0a
+#                m o p . c o m       //app, pc web
+0:0x8112:14:15:*:6d6f702e636f6d0d0a
+#               p r o f i l e . z h e n a i . c o m
+0:0x8112:10:1:*:70726f66696c652e7a68656e61692e636f6d0d0a
+#               m . z h e n a i . c o m
+0:0x8112:10:1:*:6d2e7a68656e61692e636f6d0d0a
+#               l o g i n . t u d o u . c o m //pc web
+0:0x8112:12:5:*:6c6f67696e2e7475646f752e636f6d0d0a
+#              b b s . a n h u i n e w s . c o m
+0:0x8552:0:1:*:6262732e616e6875696e6577732e636f6d0d0a
+#              p a s s p o r t . h u p u . c o m
+0:0x8112:0:1:*:70617373706f72742e687570752e636f6d0d0a
+#              b b s . h e f e i . c c
+0:0x8512:0:1:*:6262732e68656665692e63630d0a
+#              b b s . v o c . c o m . c n
+0:0x8512:0:1:*:6262732e766f632e636f6d2e636e0d0a
+#              b b s . q i a n l o n g . c o m
+0:0x8512:0:1:*:6262732e7169616e6c6f6e672e636f6d0d0a
+#               b b s . z g l x . g o v . c n //mi ma jia mi
+0:0x8502:0:-1:*:6262732e7a676c782e676f762e636e0d0a
+#              b b s . x c j d . n e t
+0:0x8512:0:1:*:6262732e78636a642e6e65740d0a
+#              b b s . n e w s x c . c o m
+0:0x8512:0:1:*:6262732e6e65777378632e636f6d0d0a
+#              b b s . g d 1 6 3 . c o m . c n
+0:0x8512:2:3:*:6262732e67643136332e636f6d2e636e0d0a
+#               b b s . g d 5 6 3 . c o m //mi ma jia mi
+0:0x8502:0:-1:*:6262732e67643536332e636f6d0d0a
+#              b b s . c h i n a u n i x . n e t
+0:0x8512:0:1:*:6262732e6368696e61756e69782e6e65740d0a
+#              b b s . p c p o p . c o m
+0:0x8512:0:1:*:6262732e7063706f702e636f6d0d0a
+#              p o p . p c p o p . c o m
+0:0x8512:0:1:*:706f702e7063706f702e636f6d0d0a
+#              w w w . j x b x . c c
+0:0x8512:0:1:*:7777772e6a7862782e63630d0a
+#              w w w . j i n g t i n g . o r g
+0:0x8512:0:1:*:7777772e6a696e6774696e672e6f72670d0a
+#              w w w . x u a n c h e n g . o r g
+0:0x8512:0:1:*:7777772e7875616e6368656e672e6f72670d0a
+#              w w w . x u a n c h e n g b b s . c o m
+0:0x8512:0:1:*:7777772e7875616e6368656e676262732e636f6d0d0a
+#              w w w . x c e t v . c o m
+0:0x8512:0:1:*:7777772e78636574762e636f6d0d0a
+#               w w w . n g b b s . c n
+0:0x8502:0:-1:*:7777772e6e676262732e636e0d0a
+#              w w w . n g b b s . c o m
+0:0x8502:0:1:*:7777772e6e676262732e636f6d0d0a
+#              w w w . f e i x i . c c
+0:0x8512:0:1:*:7777772e66656978692e63630d0a
+#              w w w . j i n g d e l u n t a n . c o m
+0:0x8512:0:1:*:7777772e6a696e6764656c756e74616e2e636f6d0d0a
+#              w w w . j x b b s . c o m . c n //mi ma jia mi
+0:0x8502:0:1:*:7777772e6a786262732e636f6d2e636e0d0a
+#              w w w . s h u i y a n g . c c
+0:0x8112:0:1:*:7777772e7368756979616e672e63630d0a
+#              w w w . z s x c . o r g
+0:0x8512:0:1:*:7777772e7a7378632e6f72670d0a
+#              k a i x i n 0 0 1 . c o m
+0:0x8112:6:1:*:6b616978696e3030312e636f6d0d0a
+#              3 6 5 j i a . c n
+0:0x8112:4:1:*:3336356a69612e636e0d0a
+#              m t . r e n r e n . c o m                //mobile web
+0:0x8112:4:1:*:6d742e72656e72656e2e636f6d0d0a
+#               w w w . r e n r e n . c o m             //pc web
+0:0x8102:6:-1:*:7777772e72656e72656e2e636f6d0d0a
+#               a p i . m . r e n r e n . c o m         //app
+0:0x8102:8:-1:*:6170692e6d2e72656e72656e2e636f6d0d0a
+#              l o g i n . 5 5 . c o m
+0:0x8112:6:1:*:6c6f67696e2e35352e636f6d0d0a
+#               m . 5 5 t u a n . c o m
+0:0x8112:20:1:*:6d2e35357475616e2e636f6d0d0a
+#              . d i a n p i n g . c o m
+0:0x8112:0:1:*:2e6469616e70696e672e636f6d0d0a
+#              w w w . l a s h o u . c o m
+0:0x8112:0:1:*:7777772e6c6173686f752e636f6d0d0a
+#               m . l e t v . c o m
+0:0x8112:12:1:*:6d2e6c6574762e636f6d0d0a
+#              l o g i n . k a n k a n . c o m      & u = 
+0:0x410a:1:0:*:6c6f67696e2e6b616e6b616e2e636f6d0d0a*26753d
+#               w w w . m a s o k . c n             //密码加密
+0:0x8502:0:-1:*:7777772e6d61736f6b2e636e0d0a
+#               b b s . i x i a o m a . c o m       //密码加密
+0:0x8502:0:-1:*:6262732e697869616f6d612e636f6d0d0a
+#              w w w . m a s h u a y u . c o m
+0:0x8112:0:1:*:7777772e6d617368756179752e636f6d0d0a
+#              w w w . s h o w l i v e . c n
+0:0x8112:0:1:*:7777772e73686f776c6976652e636e0d0a
+#              y m 2 3 4 . c o m
+0:0x8512:0:1:*:796d3233342e636f6d0d0a*0d0a0d0a
+#              w w w . f e n g q i y c . c o m
+0:0x8212:0:5:*:7777772e66656e67716979632e636f6d0d0a
+#              w w w . f q z w w . c o m
+0:0x8112:0:1:*:7777772e66717a77772e636f6d0d0a
+#              w w w . j i x i n e t . c o m
+0:0x8512:0:1:*:7777772e6a6978696e65742e636f6d0d0a
+#               S e t - C o o k i e :   _ x c a r _ n a m e =   //pc web, mobile web
+0:0x4104:0:-1:*:5365742d436f6f6b69653a205f786361725f6e616d653d
+#               . x c a r . c o m . c n                         //pc web, app
+0:0x8200:0:-1:*:2e786361722e636f6d2e636e0d0a
+#                . a u t o h o m e . c o m . c n                //pc web, moble web, app
+0:0x8202:0:-1:*:2e6175746f686f6d652e636f6d2e636e0d0a
+#               . z h a o p i n . c o m 
+0:0x810a:2:-1:*:2e7a68616f70696e2e636f6d0d0a
+#              m o b i l e =  p a s s w o r d =  . g o n g r e n . c o m 
+0:0x1119:0:1:*:6d6f62696c653d*70617373776f72643d*2e676f6e6772656e2e636f6d0d0a
+#               . 5 1 j o b . c o m 
+0:0x811a:14:1:*:2e35316a6f622e636f6d0d0a
+#              . c h i n a h r . c o m               N a m e % 2 2 % 3 A % 2 2  % 2 2  p w % 2 2 % 3 A % 2 2  % 2 2 //app
+0:0x1002:2:4:*:2e6368696e6168722e636f6d0d0a*0d0a0d0a*4e616d65253232253341253232*253232*7077253232253341253232*253232
+#              . c h i n a h r . c o m  //pc web
+0:0x8112:0:1:*:2e6368696e6168722e636f6d0d0a
+#              . w e a l i n k . c o m      m o b i l e O r E m a i l =  p a s s w o r d s = 
+0:0x1118:1:2:*:2e7765616c696e6b2e636f6d0d0a*6d6f62696c654f72456d61696c3d*70617373776f7264733d
+#              . w e a l i n k . c o m 
+0:0x8118:6:1:*:2e7765616c696e6b2e636f6d0d0a
+
+#第一个字段为id，需要对规则检索的结果虑重来防止重复审计，请设置id，有效id不能0
+
+#explain field 2 each bit meaning
+#0x1000 user ahead
+#0x2000 pass ahead
+#0x4000 only user
+#0x8000 use static sig
+#0x0100 user urlencode 1 time
+#0x0200 user urlencode 2 times
+#0x0400 user need iconv
+#0x0800 user need special decode
+#0x0010 pass urlencode 1 time
+#0x0020 pass urlencode 2 times
+#0x0040 pass need iconv
+#0x0080 pass need special decode
+#0x0001 http method get
+#0x0002 http method post
+#0x0004 user info in cookie
+#0x0008 user and pass info in url format
+#
+#
+# static sig
+# 0 name=
+# 1 password=
+# 2 Name=
+# 3 Userpass=
+# 4 account=
+# 5 passwd=
+# 6 email=
+# 8 user=
+# 10loginInfo=
+# 12loginname=
+# 14loginName=
+# 15loginPasswd=
+# 16pwuser=
+# 17pwpwd=
+# 18writer=
+# 20passport=
+# 22mobilephone=
+# 24mobile=
+# 27pwd=
