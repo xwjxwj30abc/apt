@@ -27,14 +27,23 @@ public interface AptLibrary extends Library {
 	public static final int APT_NEED_MORE = 1;
 	public static final int APT_CONNTRACK = 2;
 	public static final int APT_FILE = 3;
-	public static final int APT_ALTER = 4;
+	public static final int APT_ALERT = 4;
 	public static final int APT_ERR_MEM = 0x1000;
 	public static final int APT_ERR_BUF = (0x1000 + 1);
 	public static final int APT_ERR_DISK = (0x1000 + 2);
+	public static final int INTERNET_TYPE_IP = 2;
+	public static final int INTERNET_TYPE_IPV6 = 10;
+	public static final int PROTOCOL_TCP = 6;
+	public static final int PROTOCOL_UDP = 17;
+	public static final int SERVICE_FTP = 21;
+	public static final int SERVICE_SMTP = 25;
+	public static final int SERVICE_HTTP = 80;
+	public static final int SERVICE_POP3 = 110;
+	public static final int SERVICE_IMAP = 143;
 
 	/**
 	 * conntrack info<br>
-	 * <i>native declaration : line 27</i>
+	 * <i>native declaration : line 36</i>
 	 */
 	public static class apt_conntrack extends Structure {
 		public long ts;
@@ -46,17 +55,15 @@ public interface AptLibrary extends Library {
 		public int len;
 		/** C type : field1_union */
 		public field1_union field1;
-		/** C type : void* */
-		public Pointer url;
 
-		/** <i>native declaration : line 40</i> */
+		/** <i>native declaration : line 49</i> */
 		public static class field1_union extends Union {
 			/** C type : ipv4_struct */
 			public ipv4_struct ipv4;
 			/** C type : ipv6_struct */
 			public ipv6_struct ipv6;
 
-			/** <i>native declaration : line 41</i> */
+			/** <i>native declaration : line 50</i> */
 			public static class ipv4_struct extends Structure {
 				public int source;
 				public int dest;
@@ -93,7 +100,7 @@ public interface AptLibrary extends Library {
 				};
 			};
 
-			/** <i>native declaration : line 47</i> */
+			/** <i>native declaration : line 56</i> */
 			public static class ipv6_struct extends Structure {
 				/** C type : uint32_t[4] */
 				public int[] source = new int[4];
@@ -177,16 +184,15 @@ public interface AptLibrary extends Library {
 
 		@Override
 		protected List<?> getFieldOrder() {
-			return Arrays.asList("ts", "type", "protocol", "service", "data", "len", "field1", "url");
+			return Arrays.asList("ts", "type", "protocol", "service", "data", "len", "field1");
 		}
 
 		/**
 		 * @param data C type : void*<br>
-		 * @param field1 C type : field1_union<br>
-		 * @param url C type : void*
+		 * @param field1 C type : field1_union
 		 */
 		public apt_conntrack(long ts, byte type, byte protocol, short service, Pointer data, int len,
-				field1_union field1, Pointer url) {
+				field1_union field1) {
 			super();
 			this.ts = ts;
 			this.type = type;
@@ -195,7 +201,6 @@ public interface AptLibrary extends Library {
 			this.data = data;
 			this.len = len;
 			this.field1 = field1;
-			this.url = url;
 		}
 
 		public apt_conntrack(Pointer peer) {
@@ -213,7 +218,7 @@ public interface AptLibrary extends Library {
 
 	/**
 	 * file info<br>
-	 * <i>native declaration : line 58</i>
+	 * <i>native declaration : line 67</i>
 	 */
 	public static class apt_file extends Structure {
 		/** C type : apt_conntrack */
@@ -255,14 +260,14 @@ public interface AptLibrary extends Library {
 
 	/**
 	 * ids event<br>
-	 * <i>native declaration : line 66</i>
+	 * <i>native declaration : line 75</i>
 	 */
-	public static class apt_alter extends Structure {
+	public static class apt_alert extends Structure {
 		/** C type : apt_conntrack */
 		public AptLibrary.apt_conntrack conn;
 		public long id;
 
-		public apt_alter() {
+		public apt_alert() {
 			super();
 		}
 
@@ -272,21 +277,21 @@ public interface AptLibrary extends Library {
 		}
 
 		/** @param conn C type : apt_conntrack */
-		public apt_alter(AptLibrary.apt_conntrack conn, long id) {
+		public apt_alert(AptLibrary.apt_conntrack conn, long id) {
 			super();
 			this.conn = conn;
 			this.id = id;
 		}
 
-		public apt_alter(Pointer peer) {
+		public apt_alert(Pointer peer) {
 			super(peer);
 		}
 
-		public static class ByReference extends apt_alter implements Structure.ByReference {
+		public static class ByReference extends apt_alert implements Structure.ByReference {
 
 		};
 
-		public static class ByValue extends apt_alter implements Structure.ByValue {
+		public static class ByValue extends apt_alert implements Structure.ByValue {
 
 		};
 	};
@@ -294,7 +299,7 @@ public interface AptLibrary extends Library {
 	/**
 	 * init the handle<br>
 	 * Original signature : <code>apt_stream* apt_stream_init(const char*, const char*)</code><br>
-	 * <i>native declaration : line 77</i><br>
+	 * <i>native declaration : line 86</i><br>
 	 * @deprecated use the safer methods {@link #apt_stream_init(java.lang.String, java.lang.String)} and {@link #apt_stream_init(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated
@@ -303,28 +308,28 @@ public interface AptLibrary extends Library {
 	/**
 	 * init the handle<br>
 	 * Original signature : <code>apt_stream* apt_stream_init(const char*, const char*)</code><br>
-	 * <i>native declaration : line 77</i>
+	 * <i>native declaration : line 86</i>
 	 */
 	AptLibrary.apt_stream apt_stream_init(String lib_dir, String output_dir);
 
 	/**
 	 * destroy the handle<br>
 	 * Original signature : <code>int apt_stream_destroy(apt_stream*)</code><br>
-	 * <i>native declaration : line 80</i>
+	 * <i>native declaration : line 89</i>
 	 */
 	int apt_stream_destroy(AptLibrary.apt_stream stream);
 
 	/**
 	 * loop func. output is the common pointer, check the return value as type<br>
 	 * Original signature : <code>int apt_stream_loop(apt_stream*, void**)</code><br>
-	 * <i>native declaration : line 83</i>
+	 * <i>native declaration : line 92</i>
 	 */
 	int apt_stream_loop(AptLibrary.apt_stream stream, PointerByReference output);
 
 	/**
 	 * push more buffer to handle<br>
 	 * Original signature : <code>int apt_stream_push(apt_stream*, const char*, int)</code><br>
-	 * <i>native declaration : line 86</i><br>
+	 * <i>native declaration : line 95</i><br>
 	 * @deprecated use the safer methods {@link #apt_stream_push(apt.AptLibrary.apt_stream, java.lang.String, int)} and {@link #apt_stream_push(apt.AptLibrary.apt_stream, com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated
@@ -333,14 +338,14 @@ public interface AptLibrary extends Library {
 	/**
 	 * push more buffer to handle<br>
 	 * Original signature : <code>int apt_stream_push(apt_stream*, const char*, int)</code><br>
-	 * <i>native declaration : line 86</i>
+	 * <i>native declaration : line 95</i>
 	 */
 	int apt_stream_push(AptLibrary.apt_stream stream, String buf, int len);
 
 	/**
 	 * free the memory of putput data<br>
 	 * Original signature : <code>int apt_stream_output_free(void*, int)</code><br>
-	 * <i>native declaration : line 89</i>
+	 * <i>native declaration : line 98</i>
 	 */
 	int apt_stream_output_free(Pointer output, int type);
 

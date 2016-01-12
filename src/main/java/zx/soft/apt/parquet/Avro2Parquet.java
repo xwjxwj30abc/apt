@@ -14,6 +14,11 @@ import org.apache.parquet.schema.MessageTypeParser;
 
 import com.google.common.io.Resources;
 
+/**
+ * avro文件转换为parquet文件
+ * @author fgq
+ *
+ */
 public class Avro2Parquet {
 
 	public static boolean testAvroSchemaConverter() throws IOException {
@@ -25,10 +30,6 @@ public class Avro2Parquet {
 		System.out.println(schema.toString());
 		MessageType expectedMT = MessageTypeParser.parseMessageType(schemaString);
 		return expectedMT.equals(schema);
-	}
-
-	public void testAvro2Parquet() {
-
 	}
 
 	public static void main(String[] args) throws IOException {

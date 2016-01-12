@@ -13,6 +13,11 @@ import org.apache.avro.generic.GenericRecord;
 import org.apache.avro.io.DatumReader;
 import org.apache.avro.io.DatumWriter;
 
+/**
+ * 写avro文件
+ * @author fgq
+ *
+ */
 public class AVROExample {
 
 	public static void main(String[] args) throws IOException {

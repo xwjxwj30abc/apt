@@ -16,6 +16,11 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 
+/**
+ * mapreduce读写hbase表
+ * @author fgq
+ *
+ */
 public class ReadWriteTable {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
@@ -44,7 +49,7 @@ public class ReadWriteTable {
 
 		@Override
 		public void map(ImmutableBytesWritable row, Result value, Context context) throws IOException,
-		InterruptedException {
+				InterruptedException {
 
 			String val = new String(value.getValue(Bytes.toBytes("cf"), Bytes.toBytes("so")));
 			text.set(val);
@@ -77,7 +82,7 @@ public class ReadWriteTable {
 
 		@Override
 		public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException,
-		InterruptedException {
+				InterruptedException {
 			int i = 0;
 			for (IntWritable val : values) {
 				i += val.get();

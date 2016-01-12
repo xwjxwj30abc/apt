@@ -13,15 +13,19 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.parquet.avro.AvroParquetOutputFormat;
 import org.apache.parquet.hadoop.metadata.CompressionCodecName;
 
+/**
+ * mapreduce读取AVRO文件并转换为parquet格式
+ * @author fgq
+ *
+ */
 public class Avro2ParquetMapReduce {
 
-	//mapreduce读取AVRO文件并转换为parquet格式
 	public static void main(String[] args) throws ClassNotFoundException, IOException, InterruptedException {
 
-		String basicDir = "hdfs://archtorm:9000";
-		Path schemaPath = new Path(basicDir + "/user/xuwenjuan/mapreduce/user.avsc");
-		Path inputPath = new Path(basicDir + "/user/xuwenjuan/mapreduce/user.avro");
-		Path outputPath = new Path(basicDir + "/user/xuwenjuan/mapreduce/output_parquet");
+		String basicDir = "hdfs://192.168.3.12:9000";
+		Path schemaPath = new Path(basicDir + "/user/parquet/avro/user.avsc");
+		Path inputPath = new Path(basicDir + "/user/parquet/avro/user.avro");
+		Path outputPath = new Path(basicDir + "/user/parquet/avro/output_parquet");
 		Configuration conf = new Configuration();
 		conf.addResource("core-site.xml");
 		conf.addResource("hdfs-site.xml");

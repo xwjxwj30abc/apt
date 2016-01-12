@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.NavigableMap;
 
 import org.apache.hadoop.hbase.client.Result;
+import org.apache.hadoop.hbase.util.Bytes;
 
 public class Combine {
 
@@ -18,8 +19,10 @@ public class Combine {
 		NavigableMap<byte[], byte[]> map = result.getFamilyMap(family.getBytes());
 		try {
 			for (int i = 1; i < map.size(); i++) {
-				byte[] tmp = map.get(String.valueOf(i).getBytes());
-				st.write(tmp);
+				byte[] tmp = map.get(Bytes.toBytes(String.valueOf(i)));
+				if (tmp != null) {
+					st.write(tmp);
+				}
 				//bos.write(tmp);
 			}
 			//bos.flush();
