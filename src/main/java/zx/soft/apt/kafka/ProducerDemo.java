@@ -33,6 +33,12 @@ public class ProducerDemo {
 		Boolean isAsync = Boolean.TRUE; // 是否异步
 		for (int i = 0; i < 10_000_000; i++) {
 			if (isAsync) { // 发送异步消息
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				producer.send(
 						new ProducerRecord<String, String>("apt-receive1", Integer.toString(i), Integer.toString(i)),
 						new DemoCallBack(System.currentTimeMillis(), i, Integer.toString(i)));

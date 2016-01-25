@@ -1,6 +1,5 @@
 package zx.soft.apt.j2c;
 
-import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -34,11 +33,11 @@ public class LibAPT {
 		boolean run = true;
 		int len;
 		int index = 0;
-		int getFileNum = 0;
-		String lib_dir = "/home/fgq/Desktop/apt_ubuntu_so/lib_dir";
-		String output_dir = "/home/fgq/apt_output";
+		int looptime = 0;
+		String lib_dir = "/home/fgq/Desktop/apt.so/apt_ubuntu_so_20160125/lib_dir";
+		String output_dir = "/home/fgq/output";
 		PointerByReference output = new PointerByReference();
-		File pacpFile = new File("src/main/resources/file");
+		File pacpFile = new File("/home/fgq/develop/eclipse/work/apt/src/main/resources/file");
 		List<File> files = new ArrayList<>();
 		if (pacpFile.isDirectory()) {
 			File[] tempFiles = pacpFile.listFiles();
@@ -61,13 +60,16 @@ public class LibAPT {
 			System.exit(0);
 		}
 
-		inputStream = new BufferedInputStream(new FileInputStream(files.get(index++)));
+		logger.info("index=" + index);
+		File file = files.get(index);
+		inputStream = new FileInputStream(file);
+		index++;
 		inputStream.skip(24);
 
 		while (run) {
 			//apt_stream_loop返回APT_ALERT有延时，可能pcap文件内容已经输入完apt_stream_loop还没有返回APT_ALERT
 			//这时需要等待几秒再调用一次apt_stream_loop查看结果
-			//Thread.sleep(100);
+			//Thread.sleep(500);
 			ret = AptLibrary.INSTANCE.apt_stream_loop(stream, output);
 			switch (ret) {
 			case AptLibrary.APT_OK:
@@ -75,13 +77,18 @@ public class LibAPT {
 			case AptLibrary.APT_NEED_MORE:
 				len = inputStream.read(buf, 0, buf.length);
 				if (len == -1) {
+					inputStream.close();
 					if (index == files.size()) {
-						logger.info("还原文件数:" + getFileNum);
-						System.exit(0);
+						index = 0;
+						looptime++;
+						//						if (looptime == 10) {
+						//							System.exit(0);
+						//						}
+						System.err.println("循环次数:looptime=" + looptime);
 					}
-					inputStream = new BufferedInputStream(new FileInputStream(files.get(index++)));
+					inputStream = new FileInputStream(files.get(index));
+					index++;
 					inputStream.skip(24);
-					logger.info("当前文件index是" + index);
 					len = inputStream.read(buf, 0, buf.length);
 				}
 				if (len > 0) {
@@ -95,15 +102,12 @@ public class LibAPT {
 				break;
 			case AptLibrary.APT_ALERT:
 				Pointer alertPointer = output.getValue();
-				logger.info("apt_alert信息：");
 				show(alertPointer);
-				long idAlert = pointer.getLong(64);
+				long idAlert = alertPointer.getLong(64);
 				logger.info("id=" + idAlert);
 				AptLibrary.INSTANCE.apt_stream_output_free(output.getValue(), ret);
 				break;
 			case AptLibrary.APT_FILE:
-				getFileNum++;
-				logger.info("apt_file信息：");
 				Pointer afPointer = output.getValue();
 				show(afPointer);
 				Pointer fileP = afPointer.getPointer(64);
@@ -126,29 +130,27 @@ public class LibAPT {
 	}
 
 	private static void show(Pointer pointer) throws UnknownHostException {
-		long tsAlert = pointer.getLong(0);
-		byte typeAlert = pointer.getByte(8);
-		byte protocolAlert = pointer.getByte(9);
-		short serviceAlert = pointer.getShort(10);
-		int lenAlert = pointer.getInt(24);
-		logger.info("*****************begin***************");
-		logger.info("ts=" + tsAlert);
-		logger.info("type=" + typeAlert);
-		logger.info("protocol=" + protocolAlert);
-		logger.info("service=" + serviceAlert);
-		logger.info("len=" + lenAlert);
+		long ts = pointer.getLong(0);
+		byte type = pointer.getByte(8);
+		byte protocol = pointer.getByte(9);
+		short service = pointer.getShort(10);
+		int len = pointer.getInt(24);
+		logger.info("ts=" + ts);
+		logger.info("type=" + type);
+		logger.info("protocol=" + protocol);
+		logger.info("service=" + service);
+		logger.info("len=" + len);
 
-		Pointer unAlert = pointer.share(28);
-		byte[] sourceAlert = unAlert.getByteArray(0, 4);
-		byte[] desAlert = unAlert.getByteArray(4, 4);
-		byte[] sportAlert = unAlert.getByteArray(8, 2);
-		byte[] dportAlert = unAlert.getByteArray(10, 2);
-		logger.info("source ip=" + Inet4Address.getByAddress(sourceAlert) + "");
-		logger.info("des ip=" + Inet4Address.getByAddress(desAlert) + "");
-		logger.info("source port=" + ((sportAlert[1] & 0xFF) | (sportAlert[0] & 0xFF) << 8) + "");
-		logger.info("des port=" + ((dportAlert[1] & 0xFF) | (dportAlert[0] & 0xFF) << 8) + "");
-		logger.info("*****************end***************");
-		logger.info("");
+		Pointer un = pointer.share(28);
+		byte[] source = un.getByteArray(0, 4);
+		byte[] des = un.getByteArray(4, 4);
+		byte[] sport = un.getByteArray(8, 2);
+		byte[] dport = un.getByteArray(10, 2);
+		logger.info("source ip=" + Inet4Address.getByAddress(source) + "");
+		logger.info("des ip=" + Inet4Address.getByAddress(des) + "");
+		logger.info("source port=" + ((sport[1] & 0xFF) | (sport[0] & 0xFF) << 8) + "");
+		logger.info("des port=" + ((dport[1] & 0xFF) | (dport[0] & 0xFF) << 8) + "");
+
 	}
 
 	public static void main(String[] args) throws IOException, InterruptedException {

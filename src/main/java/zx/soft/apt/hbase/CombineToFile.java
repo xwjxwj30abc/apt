@@ -1,8 +1,7 @@
-package zx.soft.apt.j2c;
+package zx.soft.apt.hbase;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.NavigableMap;
 
 import org.apache.hadoop.hbase.client.HTableInterface;
@@ -12,8 +11,6 @@ import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import zx.soft.apt.hbase.PcapHBase;
 
 public class CombineToFile {
 
@@ -27,25 +24,24 @@ public class CombineToFile {
 		PcapHBase hbase = new PcapHBase("kafka_db");
 		String family = "apt-cache";
 		String filePre = "src/main/resources/file/";
-		Result result = null;
 		FileOutputStream st = null;
-		//		String startRow = "1452585600";
-		//		String stopRow = "2452596400";
+		String startRow = "1452596778";
+		String stopRow = "3";
 		HTableInterface table = hbase.getTable();
+		int num = 0;
 		Scan scan = new Scan();
-		//		scan.setStartRow(startRow.getBytes());
-		//		scan.setStopRow(stopRow.getBytes());
+		scan.setStartRow(startRow.getBytes());
+		scan.setStopRow(stopRow.getBytes());
 		ResultScanner scanner = table.getScanner(scan);
-		Iterator<Result> iterator = scanner.iterator();
-		while (iterator.hasNext()) {
-			result = iterator.next();
+		for (Result result : scanner) {
+			num++;
 			String key = Bytes.toString(result.getRow());
-			logger.info("当前rowkey:" + key);
 			NavigableMap<byte[], byte[]> map = result.getFamilyMap(family.getBytes());
+			logger.info("当前rowkey:" + key + "当前行数量：" + map.size());
 			byte[] size = map.get(Bytes.toBytes(String.valueOf(65535)));
 			//若存在文件结束标志，则表示文件已传输完毕，可能由于kafka消耗的问题，导致文件未真正接收完整
 			if (size != null) {
-				logger.info("获得文件结束标志并得到文件总长度；" + "rowkey: " + key + "; expext:" + Integer.valueOf(new String(size))
+				logger.info("获得文件结束标志并得到文件总长度；" + "rowkey: " + key + "; expect:" + Integer.valueOf(new String(size))
 						+ "; fact:" + map.size());
 				if (Integer.valueOf(new String(size)) == (map.size() - 1)) {
 					logger.info("表的列数与文件大小一致，此时：" + "rowkey: " + key + "; expext:" + Integer.valueOf(new String(size))
@@ -63,6 +59,8 @@ public class CombineToFile {
 				}
 			}
 		}
+
+		System.err.println(num);
 
 	}
 
